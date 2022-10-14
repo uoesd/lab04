@@ -372,14 +372,17 @@ display: none;
 <h3>Exercise 1</h3>
 <div id="narrative" class="section level4">
 <h4>Narrative</h4>
-<p><em>Remove this text and add your answer here.</em></p>
+<p>observations:935 variables:26</p>
 </div>
 </div>
 <div id="exercise-2" class="section level3">
 <h3>Exercise 2</h3>
 <div id="code" class="section level4">
 <h4>Code</h4>
-<pre class="r"><code># remove this comment and add your code here</code></pre>
+<pre class="r"><code>nobel_living &lt;- nobel%&gt;%
+  filter(!is.na(country),
+         is.na(died_date),
+          !is.na(gender))</code></pre>
 </div>
 <div id="narrative-1" class="section level4">
 <h4>Narrative</h4>

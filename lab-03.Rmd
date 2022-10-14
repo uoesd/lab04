@@ -20,7 +20,7 @@ nobel <- read_csv("data/nobel.csv")
 
 #### Narrative
 
-*Remove this text and add your answer here.*
+observations:935 variables:26
 
 
 ### Exercise 2
@@ -28,7 +28,10 @@ nobel <- read_csv("data/nobel.csv")
 #### Code
 
 ```{r nobel-living}
-# remove this comment and add your code here
+nobel_living <- nobel%>%
+  filter(!is.na(country),
+         is.na(died_date),
+          !is.na(gender))
 ```
 
 #### Narrative
